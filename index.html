@@ -7145,6 +7145,7 @@
 
     <!-- End of headEnd -->
     <script defer src="updated-x-link-with-logo.js"></script>
+<script src="x-logo-fix.js"></script>
 </head>
 
 <body>
@@ -7172,7 +7173,7 @@
                 const textElements = document.querySelectorAll(".framer-text");
                 textElements.forEach(element => {
                     if (element.textContent === "X.com") {
-                        element.innerHTML = "<img src="https://framerusercontent.com/images/XhkhDVL49VxrgmzhUu96bjdpk0.png" alt="X logo" style="height:20px; width:auto;" />";
+                        element.innerHTML = "<img src=\"https://framerusercontent.com/images/XhkhDVL49VxrgmzhUu96bjdpk0.png\" alt=\"X logo\" style=\"height:20px; width:auto;\" />";
                     }
                 });
             };
