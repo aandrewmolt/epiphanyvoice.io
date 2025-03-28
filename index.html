@@ -32,6 +32,19 @@
     <meta name="robots" content="max-image-preview:large">
     <link rel="canonical" href="https://epiphanyvoice.io/">
     <meta property="og:url" content="https://epiphanyvoice.io/">
+    <style>
+        /* Ensure X.com links are always visible */
+        .framer-1mv6tsr.framer-fkwdww {
+            opacity: 1 !important;
+            display: block !important;
+            visibility: visible !important;
+        }
+        .framer-109s9a9-container {
+            opacity: 1 !important;
+            display: block !important;
+            visibility: visible !important;
+        }
+    </style>
     <style data-framer-breakpoint-css>
         @media(min-width: 1400px) {
             .hidden-72rtr7 {
@@ -7250,7 +7263,7 @@
                         </div>
                         <div class="framer-1sy91da" data-framer-name="Right side">
                             <!--$-->
-                            <a class="framer-1mv6tsr framer-fkwdww" style="opacity:0" href="./#how-it-works">
+                            <a class="framer-1mv6tsr framer-fkwdww" style="opacity:1" href="./#how-it-works">
                                 <div class="framer-109s9a9-container" data-framer-name="CTA - how it works" name="CTA - how it works" style="opacity:0">
                                     <!--$--><span name="CTA - how it works" class="framer-WLWpP framer-19a132t framer-v-1mb58dd framer-17ldikk" data-border="true" data-framer-name="White text" style="--border-bottom-width:1px;--border-color:rgba(34, 34, 34, 0);--border-left-width:1px;--border-right-width:1px;--border-style:solid;--border-top-width:1px;background-color:rgba(255, 255, 255, 0);border-bottom-left-radius:70px;border-bottom-right-radius:70px;border-top-left-radius:70px;border-top-right-radius:70px;opacity:1"
                                         data-nested-link="true" role="link" tabindex="0"><div class="framer-1heupra" data-framer-name="Try it now" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;--extracted-r6o4lv:rgb(255, 255, 255);transform:none" data-framer-component-type="RichTextContainer"><p style="--font-selector:R0Y7U29yYS02MDA=;--framer-font-family:&quot;Sora&quot;, &quot;Sora Placeholder&quot;, sans-serif;--framer-font-weight:600;--framer-line-height:100%;--framer-text-alignment:center;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))" class="framer-text">How it works</p></div></span>
@@ -7328,7 +7341,7 @@
                         </div>
                         <div class="framer-1sy91da" data-framer-name="Right side">
                             <!--$-->
-                            <a class="framer-1mv6tsr framer-fkwdww" style="opacity:0" href="./#how-it-works">
+                            <a class="framer-1mv6tsr framer-fkwdww" style="opacity:1" href="./#how-it-works">
                                 <div class="framer-109s9a9-container" data-framer-name="CTA - how it works" name="CTA - how it works" style="opacity:0">
                                     <!--$--><span name="CTA - how it works" class="framer-WLWpP framer-19a132t framer-v-1mb58dd framer-17ldikk" data-border="true" data-framer-name="White text" style="--border-bottom-width:1px;--border-color:rgba(34, 34, 34, 0);--border-left-width:1px;--border-right-width:1px;--border-style:solid;--border-top-width:1px;background-color:rgba(255, 255, 255, 0);border-bottom-left-radius:70px;border-bottom-right-radius:70px;border-top-left-radius:70px;border-top-right-radius:70px;opacity:1"
                                         data-nested-link="true" role="link" tabindex="0"><div class="framer-1heupra" data-framer-name="Try it now" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;--extracted-r6o4lv:rgb(255, 255, 255);transform:none" data-framer-component-type="RichTextContainer"><p style="--font-selector:R0Y7U29yYS02MDA=;--framer-font-family:&quot;Sora&quot;, &quot;Sora Placeholder&quot;, sans-serif;--framer-font-weight:600;--framer-line-height:100%;--framer-text-alignment:center;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))" class="framer-text">How it works</p></div></span>
@@ -9107,7 +9120,7 @@
                 for (let [a, m] of Object.entries(e)) {
                     let i = r ? m[r] : void 0;
                     if (i === null || !i && m.default === null) continue;
-                    let s = i ? ? m.default ? ? Ze(m, r);
+                    let s = i ??  m.default ??  Ze(m, r);
                     if (!s) continue;
                     let {
                         initial: p,
