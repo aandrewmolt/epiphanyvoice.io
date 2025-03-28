@@ -7148,6 +7148,48 @@
 </head>
 
 <body>
+    <script>
+        // This script prevents the page from being overridden by cached versions
+        document.addEventListener("DOMContentLoaded", function() {
+            // Force X.com logo to remain visible
+            const forceXLogoVisible = function() {
+                const xLinks = document.querySelectorAll(".framer-1mv6tsr.framer-fkwdww");
+                const xContainers = document.querySelectorAll(".framer-109s9a9-container");
+                
+                xLinks.forEach(link => {
+                    link.style.opacity = "1";
+                    link.style.visibility = "visible";
+                    link.style.display = "block";
+                });
+                
+                xContainers.forEach(container => {
+                    container.style.opacity = "1";
+                    container.style.visibility = "visible";
+                    container.style.display = "block";
+                });
+                
+                // Replace X.com text with logo where needed
+                const textElements = document.querySelectorAll(".framer-text");
+                textElements.forEach(element => {
+                    if (element.textContent === "X.com") {
+                        element.innerHTML = "<img src="https://framerusercontent.com/images/XhkhDVL49VxrgmzhUu96bjdpk0.png" alt="X logo" style="height:20px; width:auto;" />";
+                    }
+                });
+            };
+            
+            // Run immediately
+            forceXLogoVisible();
+            
+            // Also run after a short delay to catch any dynamic updates
+            setTimeout(forceXLogoVisible, 100);
+            setTimeout(forceXLogoVisible, 500);
+            setTimeout(forceXLogoVisible, 1000);
+            
+            // Monitor for changes and reapply
+            const observer = new MutationObserver(forceXLogoVisible);
+            observer.observe(document.body, { childList: true, subtree: true });
+        });
+    </script>
     <script async src="https://events.framer.com/script?v=1" data-fid="8ff6dee77618e52cebd585742fd348b4e87cb8072cf3cfbde30903c45f74a23e"></script>
     <!-- Start of bodyStart -->
 
@@ -7264,7 +7306,7 @@
                         <div class="framer-1sy91da" data-framer-name="Right side">
                             <!--$-->
                             <a class="framer-1mv6tsr framer-fkwdww" style="opacity:1" href="./#how-it-works">
-                                <div class="framer-109s9a9-container" data-framer-name="CTA - how it works" name="CTA - how it works" style="opacity:0">
+                                <div class="framer-109s9a9-container" data-framer-name="CTA - how it works" name="CTA - how it works" style="opacity:1 !important">
                                     <!--$--><span name="CTA - how it works" class="framer-WLWpP framer-19a132t framer-v-1mb58dd framer-17ldikk" data-border="true" data-framer-name="White text" style="--border-bottom-width:1px;--border-color:rgba(34, 34, 34, 0);--border-left-width:1px;--border-right-width:1px;--border-style:solid;--border-top-width:1px;background-color:rgba(255, 255, 255, 0);border-bottom-left-radius:70px;border-bottom-right-radius:70px;border-top-left-radius:70px;border-top-right-radius:70px;opacity:1"
                                         data-nested-link="true" role="link" tabindex="0"><div class="framer-1heupra" data-framer-name="Try it now" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;--extracted-r6o4lv:rgb(255, 255, 255);transform:none" data-framer-component-type="RichTextContainer"><p style="--font-selector:R0Y7U29yYS02MDA=;--framer-font-family:&quot;Sora&quot;, &quot;Sora Placeholder&quot;, sans-serif;--framer-font-weight:600;--framer-line-height:100%;--framer-text-alignment:center;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))" class="framer-text">How it works</p></div></span>
                                     <!--/$-->
@@ -7272,7 +7314,7 @@
                             </a>
                             <!--/$-->
                             <!--$-->
-                            <a class="framer-tb9l60 framer-fkwdww" style="opacity:0" href="./#benefits">
+                            <a class="framer-tb9l60 framer-fkwdww" style="opacity:1 !important" href="./#benefits">
                                 <div class="framer-1epiyen-container" data-framer-name="CTA - benefits" name="CTA - benefits">
                                     <!--$--><span name="CTA - benefits" class="framer-WLWpP framer-19a132t framer-v-1mb58dd framer-17ldikk" data-border="true" data-framer-name="White text" style="--border-bottom-width:1px;--border-color:rgba(34, 34, 34, 0);--border-left-width:1px;--border-right-width:1px;--border-style:solid;--border-top-width:1px;background-color:rgba(255, 255, 255, 0);border-bottom-left-radius:70px;border-bottom-right-radius:70px;border-top-left-radius:70px;border-top-right-radius:70px;opacity:1"
                                         data-nested-link="true" role="link" tabindex="0"><div class="framer-1heupra" data-framer-name="Try it now" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;--extracted-r6o4lv:rgb(255, 255, 255);transform:none" data-framer-component-type="RichTextContainer"><p style="--font-selector:R0Y7U29yYS02MDA=;--framer-font-family:&quot;Sora&quot;, &quot;Sora Placeholder&quot;, sans-serif;--framer-font-weight:600;--framer-line-height:100%;--framer-text-alignment:center;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))" class="framer-text">Benefits</p></div></span>
@@ -7281,7 +7323,7 @@
                             </a>
                             <!--/$-->
                             <!--$-->
-                            <a class="framer-1pg8yn5 framer-fkwdww" style="opacity:0" href="./#pricing">
+                            <a class="framer-1pg8yn5 framer-fkwdww" style="opacity:1 !important" href="./#pricing">
                                 <div class="framer-1czqix0-container" data-framer-name="CTA - benefits" name="CTA - benefits">
                                     <!--$--><span name="CTA - benefits" class="framer-WLWpP framer-19a132t framer-v-1mb58dd framer-17ldikk" data-border="true" data-framer-name="White text" style="--border-bottom-width:1px;--border-color:rgba(34, 34, 34, 0);--border-left-width:1px;--border-right-width:1px;--border-style:solid;--border-top-width:1px;background-color:rgba(255, 255, 255, 0);border-bottom-left-radius:70px;border-bottom-right-radius:70px;border-top-left-radius:70px;border-top-right-radius:70px;opacity:1"
                                         data-nested-link="true" role="link" tabindex="0"><div class="framer-1heupra" data-framer-name="Try it now" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;--extracted-r6o4lv:rgb(255, 255, 255);transform:none" data-framer-component-type="RichTextContainer"><p style="--font-selector:R0Y7U29yYS02MDA=;--framer-font-family:&quot;Sora&quot;, &quot;Sora Placeholder&quot;, sans-serif;--framer-font-weight:600;--framer-line-height:100%;--framer-text-alignment:center;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))" class="framer-text">Pricing</p></div></span>
@@ -7290,7 +7332,7 @@
                             </a>
                             <!--/$-->
                             <!--$-->
-                            <a class="framer-5hmb2v framer-fkwdww" style="opacity:0" href="./#faq">
+                            <a class="framer-5hmb2v framer-fkwdww" style="opacity:1 !important" href="./#faq">
                                 <div class="framer-zvslbr-container" data-framer-name="CTA - benefits" name="CTA - benefits">
                                     <!--$--><span name="CTA - benefits" class="framer-WLWpP framer-19a132t framer-v-1mb58dd framer-17ldikk" data-border="true" data-framer-name="White text" style="--border-bottom-width:1px;--border-color:rgba(34, 34, 34, 0);--border-left-width:1px;--border-right-width:1px;--border-style:solid;--border-top-width:1px;background-color:rgba(255, 255, 255, 0);border-bottom-left-radius:70px;border-bottom-right-radius:70px;border-top-left-radius:70px;border-top-right-radius:70px;opacity:1"
                                         data-nested-link="true" role="link" tabindex="0"><div class="framer-1heupra" data-framer-name="Try it now" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;--extracted-r6o4lv:rgb(255, 255, 255);transform:none" data-framer-component-type="RichTextContainer"><p style="--font-selector:R0Y7U29yYS02MDA=;--framer-font-family:&quot;Sora&quot;, &quot;Sora Placeholder&quot;, sans-serif;--framer-font-weight:600;--framer-line-height:100%;--framer-text-alignment:center;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))" class="framer-text">FAQ</p></div></span>
@@ -7342,7 +7384,7 @@
                         <div class="framer-1sy91da" data-framer-name="Right side">
                             <!--$-->
                             <a class="framer-1mv6tsr framer-fkwdww" style="opacity:1" href="./#how-it-works">
-                                <div class="framer-109s9a9-container" data-framer-name="CTA - how it works" name="CTA - how it works" style="opacity:0">
+                                <div class="framer-109s9a9-container" data-framer-name="CTA - how it works" name="CTA - how it works" style="opacity:1 !important">
                                     <!--$--><span name="CTA - how it works" class="framer-WLWpP framer-19a132t framer-v-1mb58dd framer-17ldikk" data-border="true" data-framer-name="White text" style="--border-bottom-width:1px;--border-color:rgba(34, 34, 34, 0);--border-left-width:1px;--border-right-width:1px;--border-style:solid;--border-top-width:1px;background-color:rgba(255, 255, 255, 0);border-bottom-left-radius:70px;border-bottom-right-radius:70px;border-top-left-radius:70px;border-top-right-radius:70px;opacity:1"
                                         data-nested-link="true" role="link" tabindex="0"><div class="framer-1heupra" data-framer-name="Try it now" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;--extracted-r6o4lv:rgb(255, 255, 255);transform:none" data-framer-component-type="RichTextContainer"><p style="--font-selector:R0Y7U29yYS02MDA=;--framer-font-family:&quot;Sora&quot;, &quot;Sora Placeholder&quot;, sans-serif;--framer-font-weight:600;--framer-line-height:100%;--framer-text-alignment:center;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))" class="framer-text">How it works</p></div></span>
                                     <!--/$-->
@@ -7350,7 +7392,7 @@
                             </a>
                             <!--/$-->
                             <!--$-->
-                            <a class="framer-tb9l60 framer-fkwdww" style="opacity:0" href="./#benefits">
+                            <a class="framer-tb9l60 framer-fkwdww" style="opacity:1 !important" href="./#benefits">
                                 <div class="framer-1epiyen-container" data-framer-name="CTA - benefits" name="CTA - benefits">
                                     <!--$--><span name="CTA - benefits" class="framer-WLWpP framer-19a132t framer-v-1mb58dd framer-17ldikk" data-border="true" data-framer-name="White text" style="--border-bottom-width:1px;--border-color:rgba(34, 34, 34, 0);--border-left-width:1px;--border-right-width:1px;--border-style:solid;--border-top-width:1px;background-color:rgba(255, 255, 255, 0);border-bottom-left-radius:70px;border-bottom-right-radius:70px;border-top-left-radius:70px;border-top-right-radius:70px;opacity:1"
                                         data-nested-link="true" role="link" tabindex="0"><div class="framer-1heupra" data-framer-name="Try it now" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;--extracted-r6o4lv:rgb(255, 255, 255);transform:none" data-framer-component-type="RichTextContainer"><p style="--font-selector:R0Y7U29yYS02MDA=;--framer-font-family:&quot;Sora&quot;, &quot;Sora Placeholder&quot;, sans-serif;--framer-font-weight:600;--framer-line-height:100%;--framer-text-alignment:center;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))" class="framer-text">Benefits</p></div></span>
@@ -7359,7 +7401,7 @@
                             </a>
                             <!--/$-->
                             <!--$-->
-                            <a class="framer-1pg8yn5 framer-fkwdww" style="opacity:0" href="./#pricing">
+                            <a class="framer-1pg8yn5 framer-fkwdww" style="opacity:1 !important" href="./#pricing">
                                 <div class="framer-1czqix0-container" data-framer-name="CTA - benefits" name="CTA - benefits">
                                     <!--$--><span name="CTA - benefits" class="framer-WLWpP framer-19a132t framer-v-1mb58dd framer-17ldikk" data-border="true" data-framer-name="White text" style="--border-bottom-width:1px;--border-color:rgba(34, 34, 34, 0);--border-left-width:1px;--border-right-width:1px;--border-style:solid;--border-top-width:1px;background-color:rgba(255, 255, 255, 0);border-bottom-left-radius:70px;border-bottom-right-radius:70px;border-top-left-radius:70px;border-top-right-radius:70px;opacity:1"
                                         data-nested-link="true" role="link" tabindex="0"><div class="framer-1heupra" data-framer-name="Try it now" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;--extracted-r6o4lv:rgb(255, 255, 255);transform:none" data-framer-component-type="RichTextContainer"><p style="--font-selector:R0Y7U29yYS02MDA=;--framer-font-family:&quot;Sora&quot;, &quot;Sora Placeholder&quot;, sans-serif;--framer-font-weight:600;--framer-line-height:100%;--framer-text-alignment:center;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))" class="framer-text">Pricing</p></div></span>
@@ -7368,7 +7410,7 @@
                             </a>
                             <!--/$-->
                             <!--$-->
-                            <a class="framer-5hmb2v framer-fkwdww" style="opacity:0" href="./#faq">
+                            <a class="framer-5hmb2v framer-fkwdww" style="opacity:1 !important" href="./#faq">
                                 <div class="framer-zvslbr-container" data-framer-name="CTA - benefits" name="CTA - benefits">
                                     <!--$--><span name="CTA - benefits" class="framer-WLWpP framer-19a132t framer-v-1mb58dd framer-17ldikk" data-border="true" data-framer-name="White text" style="--border-bottom-width:1px;--border-color:rgba(34, 34, 34, 0);--border-left-width:1px;--border-right-width:1px;--border-style:solid;--border-top-width:1px;background-color:rgba(255, 255, 255, 0);border-bottom-left-radius:70px;border-bottom-right-radius:70px;border-top-left-radius:70px;border-top-right-radius:70px;opacity:1"
                                         data-nested-link="true" role="link" tabindex="0"><div class="framer-1heupra" data-framer-name="Try it now" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;--extracted-r6o4lv:rgb(255, 255, 255);transform:none" data-framer-component-type="RichTextContainer"><p style="--font-selector:R0Y7U29yYS02MDA=;--framer-font-family:&quot;Sora&quot;, &quot;Sora Placeholder&quot;, sans-serif;--framer-font-weight:600;--framer-line-height:100%;--framer-text-alignment:center;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))" class="framer-text">FAQ</p></div></span>
