@@ -1,0 +1,21 @@
+/* X Logo Fix Styles */
+.framer-1mv6tsr.framer-fkwdww {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+.framer-109s9a9-container {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+[href*="x.com"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+[href*="x.com"] * {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+} 
