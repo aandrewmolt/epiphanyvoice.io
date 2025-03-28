@@ -1,0 +1,34 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Cached and generated files
+api.framer.com/
+app.framerstatic.com/
+_DataURI/
+edit.framer.com/
+events.framer.com/
+fonts.gstatic.com/
+framerusercontent.com/
+
+# Backup versions
+*.original
+*.bak
